@@ -2,6 +2,7 @@
  * Create a list that holds all of your cards
  */
 
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -35,9 +36,12 @@ function shuffle(array) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+let deck = document.querySelector('.deck');
+deck.addEventListener('click', flip);
 
-document.querySelector('.deck').addEventListener('click', function (evt){
-     if (evt.target.nodeName === 'LI') {
-//        console.log('clicked');
-    }
-});
+ function flip(evt) {
+   if (evt.target.nodeName === 'LI') {
+     evt.target.classList.toggle('open');
+     evt.target.classList.toggle('show');
+   }
+ }
