@@ -47,11 +47,19 @@ deck.addEventListener('click', flip);
    addCardsList();
  }
 
+let cardsOpen = document.getElementsByClassName('open');
+let cardsOpenList = [];
 
 function addCardsList (){
-  let cardsOpen = document.getElementsByClassName('open');
-  let cardsOpenList = [];
   cardsOpenList.push(cardsOpen);
-  //call a different function
+  checkForTwo();
 //  console.log(cardsOpenList); WORKS
+}
+
+function checkForTwo() {
+  if (cardsOpenList.length === 2) {
+//    console.log('equal to two');
+  } else { 
+//    console.log('wait for it to be equal to two');
+  }
 }
