@@ -59,7 +59,20 @@ function addCardsList (){
 function checkForTwo() {
   if (cardsOpenList.length === 2) {
 //    console.log('equal to two');
+    checkForMatch();
   } else { 
 //    console.log('wait for it to be equal to two');
+  }
+}
+
+function checkForMatch() {
+  let cardOne = cardsOpen[0].childNodes[1].className;
+  let cardTwo = cardsOpen[1].childNodes[1].className;
+  if (cardOne === cardTwo) {
+    //call another function
+    console.log('we have a match');
+  } else {
+    //call another function
+    console.log('try, try, try again!');
   }
 }
