@@ -41,7 +41,17 @@ deck.addEventListener('click', flip);
 
  function flip(evt) {
    if (evt.target.nodeName === 'LI') {
-     evt.target.classList.toggle('open');
-     evt.target.classList.toggle('show');
+     evt.target.classList.add('open');
+     evt.target.classList.add('show');
    }
+   addCardsList();
  }
+
+
+function addCardsList (){
+  let cardsOpen = document.getElementsByClassName('open');
+  let cardsOpenList = [];
+  cardsOpenList.push(cardsOpen);
+  //call a different function
+//  console.log(cardsOpenList); WORKS
+}
