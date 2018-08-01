@@ -40,7 +40,7 @@ let deck = document.querySelector('.deck');
 deck.addEventListener('click', flip);
 
  function flip(evt) {
-   if (evt.target.nodeName === 'LI') {
+   if (evt.target.classList.contains('card')) {
      evt.target.classList.add('open');
      evt.target.classList.add('show');
    }
@@ -71,8 +71,15 @@ function checkForMatch() {
   if (cardOne === cardTwo) {
     //call another function
     console.log('we have a match');
+    cardsMatched();
   } else {
     //call another function
     console.log('try, try, try again!');
   }
 }
+
+function cardsMatched() {
+  cardsOpen[0].classList.add('match');
+  cardsOpen[1].classList.add('match');
+}
+
