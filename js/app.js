@@ -41,23 +41,22 @@ deck.addEventListener('click', flip);
 
  function flip(evt) {
    if (evt.target.classList.contains('card')) {
-     evt.target.classList.add('open');
-     evt.target.classList.add('show');
+     evt.target.classList.add('open', 'show');
    }
    addCardsList();
  }
 
 let cardsOpen = document.getElementsByClassName('open');
-let cardsOpenList = [];
+let cards = [];
 
 function addCardsList (){
-  cardsOpenList.push(cardsOpen);
+  cards.push(cardsOpen);
   checkForTwo();
 //  console.log(cardsOpenList); WORKS
 }
 
 function checkForTwo() {
-  if (cardsOpenList.length === 2) {
+  if (cards.length === 2) {
 //    console.log('equal to two');
     checkForMatch();
   } else { 
