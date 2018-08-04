@@ -74,6 +74,7 @@ function checkForMatch() {
   } else {
     //call another function
     console.log('try, try, try again!');
+    cardsDoNotMatch();
   }
 }
 
@@ -82,3 +83,10 @@ function cardsMatched() {
   cardsOpen[1].classList.add('match');
 }
 
+function cardsDoNotMatch() {
+  let allOpensShows = document.querySelectorAll('li.card.open.show');
+  for(let i = 0; i < allOpensShows.length; i++){
+    allOpensShows[i].className = 'card';
+  }
+  cards = [];
+}
