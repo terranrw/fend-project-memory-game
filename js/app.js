@@ -79,8 +79,13 @@ function checkForMatch() {
 }
 
 function cardsMatched() {
-  cardsOpen[0].classList.add('match');
-  cardsOpen[1].classList.add('match');
+//  cardsOpen[0].classList.add('match');
+//  cardsOpen[1].classList.add('match');
+  let allOpensShows = document.querySelectorAll('li.card.open.show');
+  for(let i = 0; i < allOpensShows.length; i++){
+    allOpensShows[i].className = 'card match';
+  }
+  cards = [];
 }
 
 function cardsDoNotMatch() {
