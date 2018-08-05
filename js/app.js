@@ -63,9 +63,10 @@ function checkForTwo() {
 }
 
 function checkForMatch() {
-  let cardOne = cardsOpen[0].childNodes[1].className;
-  let cardTwo = cardsOpen[1].childNodes[1].className;
-  if (cardOne === cardTwo) {
+  let [one, two] = cards;
+//  let cardOne = cardsOpen[0].childNodes[1].className;
+//  let cardTwo = cardsOpen[1].childNodes[1].className;
+  if (one[0].childNodes[1].className === two[1].childNodes[1].className) {
     //call another function
     console.log('we have a match');
     setTimeout(cardsMatched, 150);
