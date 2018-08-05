@@ -59,9 +59,7 @@ function checkForTwo() {
   if (cards.length === 2) {
 //    console.log('equal to two');
     checkForMatch();
-  } else { 
-//    console.log('wait for it to be equal to two');
-  }
+  } 
 }
 
 function checkForMatch() {
@@ -70,11 +68,11 @@ function checkForMatch() {
   if (cardOne === cardTwo) {
     //call another function
     console.log('we have a match');
-    cardsMatched();
+    setTimeout(cardsMatched, 150);
   } else {
     //call another function
     console.log('try, try, try again!');
-    cardsDoNotMatch();
+    setTimeout(cardsDoNotMatch, 650);
   }
 }
 
